@@ -87,6 +87,7 @@ export const News = () => {
             {filteredNews.map(news => (
               <article 
                 key={news.id} 
+                onClick={() => navigate(`/nyheter`)} /* Placeholder navigation */
                 className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full border border-slate-100 group cursor-pointer"
               >
                 {/* Image */}
@@ -109,7 +110,8 @@ export const News = () => {
                     {news.date}
                   </time>
                   
-                  <h2 className="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-blue-700 group-hover:underline transition-colors">
+                  {/* Title with Hover Effect */}
+                  <h2 className="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-blue-600 group-hover:underline underline-offset-2 transition-colors">
                     {news.title}
                   </h2>
                   
